@@ -95,7 +95,11 @@ EDGE_HOSTS = [
 # 联通线路：https://cf.090227.xyz/cu?port=443
 # 移动线路：https://cf.090227.xyz/cmcc?ips=8&port=443
 
-OPTIMAL_API = os.environ.get("OPTIMAL_API", "https://cf.090227.xyz/ct?ips=6&port=443", "https://cloudflare-ip-filter.ccav.xx.kg/edgetunnel/HK-TW-JP-KR-SG-US?limit=10")
+#OPTIMAL_API = os.environ.get("OPTIMAL_API", "https://cf.090227.xyz/ct?ips=6&port=443", "https://cloudflare-ip-filter.ccav.xx.kg/edgetunnel/HK-TW-JP-KR-SG-US?limit=10")
+OPTIMAL_API = os.environ.get(
+    "OPTIMAL_API",
+    "https://cf.090227.xyz/ct?ips=6&port=443,https://cloudflare-ip-filter.ccav.xx.kg/edgetunnel/HK-TW-JP-KR-SG-US?limit=10",
+)
 
 NODES_URL = os.environ.get("NODES_URL", "https://nihaoya9527.github.io/gate/nodes.txt")
 
