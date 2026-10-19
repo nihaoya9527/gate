@@ -72,3 +72,11 @@ jobs:
 
       - name: Show site URL
         run: 'echo "site: https://nihaoya9527.github.io/gate/ (deploy outcome: ${{ steps.deployment.outcome }})"'
+
+      - name: Delete old workflow
+        uses: Mattraks/delete-workflow-runs@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          repository: ${{ github.repository }}
+          retain_days: 3
+          keep_minimum_runs: 0
